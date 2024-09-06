@@ -1,0 +1,27 @@
+.typewriter {
+  font-size: 2rem;
+  color: white;
+  border-right: 2px solid rgb(247, 247, 247);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: rgb(255, 255, 255);
+  }
+  to {
+    border-right-color: none;
+  }
+}

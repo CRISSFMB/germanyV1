@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import '../css/Table.css';
-
+import React, { useState, useEffect } from "react";
+import "../css/Table.css";
+import DatosDisponiblesText from "./DatosDisponiblesText";
 
 const DataTable = () => {
   const [estudiantes, setEstudiantes] = useState([]);
@@ -9,18 +9,18 @@ const DataTable = () => {
   useEffect(() => {
     const fetchEstudiantes = async () => {
       try {
-        const response = await fetch('http://localhost/api/estudiantes'); // Ajusta la URL según sea necesario
+        const response = await fetch("http://localhost/api/estudiantes"); // Ajusta la URL según sea necesario
         const data = await response.json();
         setEstudiantes(data);
 
         // Configura el estado inicial
         const inicialEstado = data.reduce((acc, estudiante) => {
-          acc[estudiante.cedula] = 'matriculado';
+          acc[estudiante.cedula] = "matriculado";
           return acc;
         }, {});
         setEstadoEstudiante(inicialEstado);
       } catch (error) {
-        console.error('Error al obtener los datos:', error);
+        console.error("Error al obtener los datos:", error);
       }
     };
 
@@ -30,7 +30,8 @@ const DataTable = () => {
   const handleMoreInfo = (cedula) => {
     setEstadoEstudiante((prevEstado) => ({
       ...prevEstado,
-      [cedula]: prevEstado[cedula] === 'matriculado' ? 'retirado' : 'matriculado',
+      [cedula]:
+        prevEstado[cedula] === "matriculado" ? "retirado" : "matriculado",
     }));
   };
 
@@ -39,7 +40,7 @@ const DataTable = () => {
   };
 
   if (!estudiantes.length) {
-    return <p>No hay datos de estudiantes disponibles.</p>;
+    return <DatosDisponiblesText />;
   }
 
   return (
@@ -52,7 +53,12 @@ const DataTable = () => {
       </div>
       <div className="card-body">
         <div className="table-responsive">
-          <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
+          <table
+            className="table table-bordered"
+            id="dataTable"
+            width="100%"
+            cellSpacing="0"
+          >
             <thead>
               <tr>
                 <th>Cédula</th>
@@ -75,10 +81,16 @@ const DataTable = () => {
                   <td>{estudiante.fechaInscripcion}</td>
                   <td>
                     <button
-                      className={`btn ${estadoEstudiante[estudiante.cedula] === 'matriculado' ? 'btn-danger' : 'btn-success'}`}
+                      className={`btn ${
+                        estadoEstudiante[estudiante.cedula] === "matriculado"
+                          ? "btn-danger"
+                          : "btn-success"
+                      }`}
                       onClick={() => handleMoreInfo(estudiante.cedula)}
                     >
-                      {estadoEstudiante[estudiante.cedula] === 'matriculado' ? 'Matriculado' : 'Retirado'}
+                      {estadoEstudiante[estudiante.cedula] === "matriculado"
+                        ? "Matriculado"
+                        : "Retirado"}
                     </button>
                   </td>
                 </tr>

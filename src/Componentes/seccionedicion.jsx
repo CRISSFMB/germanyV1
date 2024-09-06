@@ -1,10 +1,10 @@
 import React from "react";
 import CardComponent from "./cards"; // Asegúrate de que la ruta sea correcta
-import "../css/Cards.css";
 import Navbar from "./Navbar";
 import DataTable1 from "./Desarrollo";
 import DashboardContent from "./header";
 import Formulario from "../paginas/matricula";
+import "../css/cards/seccionEdicionCards.css";
 
 const Cards = () => {
   const cardData = [
@@ -108,20 +108,18 @@ const Cards = () => {
     <>
       <DashboardContent />
       <DataTable1 />
-      <div className="container custom-container">
-        <div className="row justify-content-center">
-          {cardData.map((card, index) => (
-            <div className="col-lg-4 col-md-8 col-sm-12 mb-4 " key={index}>
-              <CardComponent
-                imgSrc={card.imgSrc}
-                altText={card.altText}
-                cardTitle={card.cardTitle}
-                buttonText={card.buttonText}
-                linkUrl={card.linkUrl}
-              />
-            </div>
-          ))}
-        </div>
+      <div className="gridCards">
+        {cardData.map((card, index) => (
+          <div key={index}>
+            <CardComponent
+              imgSrc={card.imgSrc}
+              altText={card.altText}
+              cardTitle={card.cardTitle}
+              buttonText={card.buttonText}
+              linkUrl={card.linkUrl}
+            />
+          </div>
+        ))}
       </div>
     </>
   );
