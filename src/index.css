@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 65.2%;
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  background-image: url("./assets/background/rose-petals.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+*,
+*:after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.relative {
+  position: relative;
+}

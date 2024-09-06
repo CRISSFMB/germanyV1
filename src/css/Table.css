@@ -1,0 +1,30 @@
+.Datos {
+    
+    position: relative;
+    z-index: 41;
+    left: -7vh;
+    top: 2rem;
+    
+}
+
+.datos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+  }
+  
+  .table-wrapper {
+    width: 80%; /* Ajusta el ancho de la tabla según sea necesario */
+    text-align: center; /* Centra el contenido dentro de .table-wrapper */
+  }
+  
+  .table {
+    margin: 0 auto; /* Centra la tabla dentro de .table-wrapper */
+  }
+  
+  .mt-3 {
+    margin-top: 1rem; /* Margen superior para separar el botón de la tabla */
+  }
+  

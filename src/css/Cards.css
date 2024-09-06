@@ -1,0 +1,29 @@
+.custom-container {
+  max-width: 2000px;
+  margin: 0 auto;
+  position: relative;
+  top: 3rem; /* Asegúrate de que haya espacio suficiente debajo de la barra */
+  left: 7rem;
+  z-index: 1;
+}
+
+.card {
+  width: 100%;
+  max-width: 20rem;
+  margin: auto;
+  text-align: center;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.row {
+  justify-content: center;
+}
+
+.col-lg-6, .col-md-8 {
+  display: flex;
+  justify-content: center;
+}

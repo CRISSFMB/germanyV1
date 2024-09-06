@@ -1,0 +1,139 @@
+/* Definir colores y estilos generales */
+:root {
+  --navbar-bg-color: #007bff; /* Color de fondo de la navbar */
+  --navbar-link-color: #ffffff; /* Color de los enlaces */
+  --navbar-link-hover-color: #e0a800; /* Color de los enlaces al pasar el ratón */
+  --navbar-link-active-color: #ffc107; /* Color del enlace activo */
+  --navbar-toggler-bg: rgba(255, 255, 255, 0.2); /* Color de fondo del botón de hamburguesa */
+  --navbar-toggler-icon-color: #ffffff; /* Color del icono de hamburguesa */
+  --navbar-padding: 1rem; /* Padding para la navbar */
+  --navbar-border-radius: 4px; /* Radio de borde para los elementos */
+  --navbar-height: 60px; /* Altura de la navbar */
+}
+
+.custom-navbar {
+  background-color: var(--navbar-bg-color);
+  padding: var(--navbar-padding);
+  position: fixed;
+  width: 80%;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--navbar-height);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
+  margin-left: 17rem;
+  
+
+}
+
+.custom-navbar-brand a {
+  color: var(--navbar-link-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.custom-navbar-toggler {
+  background: var(--navbar-toggler-bg);
+  border: none;
+  padding: 0.5rem;
+  border-radius: var(--navbar-border-radius);
+  cursor: pointer;
+  display: none; /* Ocultar en pantallas grandes */
+}
+
+.custom-navbar-toggler-icon {
+  width: 24px;
+  height: 2px;
+  background-color: var(--navbar-toggler-icon-color);
+  position: relative;
+}
+
+.custom-navbar-toggler-icon::before,
+.custom-navbar-toggler-icon::after {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background-color: var(--navbar-toggler-icon-color);
+  position: absolute;
+  left: 0;
+}
+
+.custom-navbar-toggler-icon::before {
+  top: -6px;
+}
+
+.custom-navbar-toggler-icon::after {
+  top: 6px;
+}
+
+.custom-navbar-collapse {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.custom-navbar-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.custom-nav-item {
+  margin: 0 1rem;
+}
+
+.custom-nav-link {
+  color: var(--navbar-link-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.custom-nav-link:hover {
+  color: var(--navbar-link-hover-color);
+}
+
+.custom-nav-link.active {
+  color: var(--navbar-link-active-color);
+}
+
+.custom-nav-link.disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 767px) {
+  .custom-navbar-toggler {
+    display: block;
+  }
+
+  .custom-navbar-collapse {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--navbar-bg-color);
+    padding: var(--navbar-padding);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-navbar-collapse.open {
+    display: flex;
+  }
+
+  .custom-nav-item {
+    margin: 0.5rem 0;
+  }
+}
+
