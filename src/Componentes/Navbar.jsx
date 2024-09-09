@@ -47,12 +47,6 @@ const Navbar = ({
         </li>
 
         <li className="list__item">
-          <Link to={linkTo1} onClick={() => handleCarreraClick(materia1)}>
-            {materia1}
-          </Link>
-        </li>
-
-        <li className="list__item">
           <Link to={linkTo2} onClick={() => handleCarreraClick(materia2)}>
             {materia2}
           </Link>

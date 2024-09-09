@@ -8,26 +8,16 @@ const SideBar = () => {
       <div className="sidebar__box">
         <Link to="/">Inicio</Link>
       </div>
-      <div className="sidebar__box">
-        <Link to="/">institucion</Link>
-      </div>
+      
       <div className="sidebar__box">
         <Link to="/inicio">istec</Link>
       </div>
       <div className="sidebar__box">
         <Link to="/iniciopuce">puce</Link>
       </div>
+    
       <div className="sidebar__box">
-        <Link to="/admin">Admin</Link>
-      </div>
-      <div className="sidebar__box">
-        <Link to="/student">Student</Link>
-      </div>
-      <div className="sidebar__box">
-        <Link to="/TicketList">Tickes</Link>
-      </div>
-      <div className="sidebar__box">
-        <Link to="/mallaeducativa">Plan de Estudio</Link>
+        <Link to="/student">Bienestar</Link>
       </div>
     </div>
   );

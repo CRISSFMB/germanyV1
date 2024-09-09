@@ -7,11 +7,13 @@ html {
 
 body {
   margin: 0;
-  background-image: url("./assets/background/rose-petals.svg");
+  background: #373b44;
+  background: -webkit-linear-gradient(to right, #4286f4, #373b44); 
+  background: linear-gradient(to right, #4286f4, #373b44); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 
 *,
