@@ -15,6 +15,7 @@ const Iniciopuce = () => {
       edad: 18,
       fechaInscripcion: "2014/07/25",
     },
+    
     {
       cedula: "1104784688",
       nombre: "Laura",
